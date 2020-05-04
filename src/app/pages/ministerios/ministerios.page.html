@@ -1,0 +1,35 @@
+<!-- <app-header titulo="Ministerios" color="primary"></app-header> -->
+<ion-header>
+  <ion-toolbar color="primary">
+      <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+    <ion-title class="ion-title">
+      Ministerios
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <!-- <ion-list>
+
+    <ion-card button *ngFor="let empresa of empresas" [routerLink]="['/', 'informacion', empresa.id]">
+      <ion-card-header>
+        <ion-card-title class="ion-text-nowrap">{{ empresa.nombre }}</ion-card-title>
+      </ion-card-header>
+    </ion-card>
+
+  </ion-list> -->
+
+  <ion-grid no-padding>
+    <ion-row >
+        <ion-col size="6" button *ngFor="let empresa of empresas" [routerLink]="['/', 'informacion', empresa.id]">
+          <div class="ion-title">
+              <ion-img src="{{empresa.fotos.url}}"></ion-img>
+              {{empresa.nombre}}
+          </div>
+        </ion-col>
+    </ion-row>
+</ion-grid>
+
+</ion-content>

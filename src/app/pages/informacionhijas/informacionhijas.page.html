@@ -1,0 +1,20 @@
+<app-header titulo="Informacion"></app-header>
+
+<ion-content text-center>
+  <ion-card *ngIf="information">
+    <ion-card-header>
+      <ion-card-title>
+        {{ information.nombreiglesia}}
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+        <ion-text>Lider(es): {{ information.lideres }}</ion-text>
+        <br/>
+        <ion-text>Telefonos: <a href="tel: {{information.telefono}}">{{information.telefono}}</a><a class="espacios" href="tel:{{information.telefonodos}}">{{information.telefonodos}}</a></ion-text>
+        <br>
+        <ion-text>Ubicacion: <a href="http://maps.google.com/maps?f=q&q={{information.latitud}},{{information.longitud}}&z=3">Ir a ubicacion</a></ion-text>
+      </ion-card-content>
+  </ion-card>
+  
+
+</ion-content>

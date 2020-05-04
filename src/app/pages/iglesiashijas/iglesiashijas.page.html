@@ -1,0 +1,25 @@
+<!-- <app-header titulo="Iglesias Hijas" color="primary"></app-header> -->
+<ion-header>
+  <ion-toolbar color="primary">
+      <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+    <ion-title class="ion-title">
+      Iglesias Hijas
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list >
+
+    <ion-card button *ngFor="let empresa of empresas" [routerLink]="['/', 'informacionhijas', empresa.id]" class="background-image">
+      <ion-card-header >
+        <ion-card-title class="ion-text-nowrap">{{ empresa.nombreiglesia }}</ion-card-title>
+      </ion-card-header>
+    </ion-card>
+
+  </ion-list>
+</ion-content>
+
+<!-- class="background-image" -->

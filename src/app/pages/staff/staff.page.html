@@ -1,0 +1,37 @@
+<!-- <app-header titulo="Staff" color="primary"></app-header> -->
+<ion-header>
+    <ion-toolbar color="primary">
+        <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+      <ion-title class="ion-title">
+        Staff
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+<ion-header>
+    <!-- <ion-toolbar>
+        <ion-title>prueba</ion-title>
+    </ion-toolbar> -->
+</ion-header>
+
+<ion-content>
+
+    <ion-slides pager="true">
+        <ion-slide *ngFor="let imagen of staff">
+            <preload-image [ratio]="{w: 2, h: 1}" src="{{imagen.imagenes.url}}" style="width: 400px;height: 200px;"></preload-image>
+        </ion-slide>
+    </ion-slides>
+
+    <ion-text>
+        <h6 style="margin: 20px;">
+        La Iglesia Internacional de la Familia, nace en el corazón de Dios con una pasión por las almas perdidas. 
+        Pertenece a las Asambleas de Dios de Bolivia, su sede principal se encuentra en Santa Cruz de la Sierra, Bolivia. 
+        Bajo la Dirección de los Prs. Ariel e Inés Batallanos, la IIFamilia, tiene por misión proclamar a las familias cómo Dios redime al ser humano y enseñar a la iglesia cómo deben vivir los redimidos.
+        <br>
+        La visión al 2020: una mega iglesia, internacionalmente establecida y reconocida por la fidelidad a los principios de Jesucristo y al aporte de valores trascendentes a las familias de nuestra sociedad.
+        La IIFamilia tiene como objetivo plantar 20 iglesias hijas a nivel local, impactar a las principales capitales del país y llegar a otros destinos internacionales con la Palabra de Dios.
+        </h6>
+    </ion-text>
+</ion-content>

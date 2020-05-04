@@ -1,5 +1,7 @@
 {
   "name": "IIFamilia",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }
